@@ -45,3 +45,7 @@
     estMort($courgette);
 
     // var_dump($limace->obtenirNom()); // Permet d'obtenir le nom qui est en privé.
+
+    $navet = new Legume('navet');
+    $navet->pousser();
+    

@@ -5,6 +5,7 @@
         public $nom;
         public $taille = 10;
         public $feuilles = 2;
+        CONST FEUILLES_MAX = 20;
         public $genre;
 
         public function __construct($nom){
@@ -13,7 +14,7 @@
 
         public function pousser($nb_de_feuilles = null){
             if(is_null($nb_de_feuilles)){
-                $this->feuilles += 1;
+                $this->feuilles = self::FEUILLES_MAX;
             } else{
                 $this->feuilles += $nb_de_feuilles;
             }
