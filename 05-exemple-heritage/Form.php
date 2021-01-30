@@ -1,39 +1,32 @@
 <?php
 
-    /**
-     * class Form
-     * Permet de générer un formulaire rapidement et simplement
-     * 
-     * 
-     * 
-     * 
-     */
-    class Form{
+    class Form {
 
-        public $donnees;
+        private $donnees;
         public $balise = 'p';
 
-        public function __construct($donnees = array()){
+        public function __construct($donnees = array()) {
             $this->donnees = $donnees;
         }
 
-        public function getValue($index){
-            if(isset($this->$donnees[$index])){
-                return $this->$donnees[$index];
-            } else{
+        public function getValue($index) {
+            if (isset($this->donnees[$index])) {
+                echo $this->donnees[$index];
+            } else {
                 return null;
             }
         }
 
-        public function entourer($html){
-            return '<' . $this->balise . '>' . $html .'</'. $this->balise . '>';
+        public function entourer($contenu) {
+            echo '<' . $this->balise . '>' . $contenu . '</' . $this->balise . '>';
         }
 
-        public function input($nom){
-            return '<input type="text" name="' . $nom . '" value="' . $this->getValue($nom) . '>';
+        public function input($nom) {
+            echo $this->entourer('<input type="text" name="' . $nom . '" value="' . $this->getValue($nom) . '">');
         }
 
-        public function submit($val){
-            return "<button type='submit'>$val<button>";
+        public function submit($valeur) {
+            echo '<button type="submit">' . $valeur . '</button>';
         }
+
     }

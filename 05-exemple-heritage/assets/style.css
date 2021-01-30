@@ -1,0 +1,34 @@
+h1 {
+    background-color: blue;
+}
+
+h2 {
+    background-color: #8892bf;
+    color: #f8f9fa;
+    text-align: center;
+    font-weight: normal;
+    margin: .5em 0;
+    padding: .2em;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}    
+    
+.arial {
+    font-family: Arial, sans-serif;
+}
+
+.fond-grisclair {
+    background-color: #dcdcdc;
+}
+
+.fade-out {
+    color: green;
+    animation: fadeOut 3s 7s linear forwards;
+}
+
+@keyframes fadeOut {
+    to {color: #000; opacity: 0}
+}
